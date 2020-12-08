@@ -1,7 +1,7 @@
 with open('challenges/input-08.txt') as file:
     raw = file.read()
 
-instructions = [[i[0],int(i[1])] for i in [i.split() for i in raw.splitlines()]]
+instructions = [i.split() for i in raw.splitlines()]
 for i in range(len(instructions)):
     instructions[i][0] = 'nop' if instructions[i][0]=='jmp' else ('jmp' if instructions[i][0]=='nop' else 'acc')
     
