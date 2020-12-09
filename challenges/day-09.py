@@ -16,17 +16,16 @@ def part1():
         validation.pop(0)
 
 def part2():
-    n = part1()
-    chunksize = 1
-    while True:
-        for i in range(len(raw)-chunksize):
-            s = sum(raw[i:i+chunksize])
-            if s==n:
-                return max(raw[i:i+chunksize])+min(raw[i:i+chunksize])
-            elif s>n:
-                break # optimization
-        
-        chunksize += 1
+    goal = part1()
+    start, end,  total = 1, 0, 0
+    while total != goal:
+        end += 1
+        total += raw[end]
+        while total > goal:
+            total -= raw[start]
+            start += 1
+    
+    return min(raw[start:end+1])+max(raw[start:end+1])
 
 print(part1())
 print(part2())
