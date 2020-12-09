@@ -21,13 +21,10 @@ def contains_bag(bag: str, target: str = 'shiny gold') -> bool:
 
 
 def count_bags(bag: str) -> int:
-    if data[bag]:
-        contains = 0
-        for color, amount in data[bag].items():
-            contains += (count_bags(color)+1)*amount
-        return contains
-    else:
-        return 0
+    contains = 0
+    for color, amount in data[bag].items():
+        contains += (count_bags(color)+1)*amount
+    return contains
 
 
 part1 = sum(contains_bag(bag) for bag in data)
