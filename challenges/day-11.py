@@ -78,9 +78,9 @@ def run(tolerancy=4, use_sight=False):
     Runs until the seats stabilize, then return how many occupied seats there are.
     """
     table = deepcopy(data)
-    while True:
-        if conways_iteration(table, tolerancy, use_sight):
-            break
+    # just iterate until you're done.
+    while conways_iteration(table, tolerancy, use_sight):
+        pass
         
     return count_occupied(table)
 
