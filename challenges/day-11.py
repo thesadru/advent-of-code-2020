@@ -27,14 +27,11 @@ def get_visible(row, col, table):
     occupied = 0
     for a,b in directions:
         r,c = row+a,col+b
-        while True:
-            if 0 <= r < len(table) and 0 <= c < len(table[0]):
-                seat = table[r][c]
-                if seat != '.':  # since there's no more floor, just break
-                    occupied += seat == '#'
-                    break
-            else:
-                break  # break since finally reached out of bounds
+        while 0 <= r < len(table) and 0 <= c < len(table[0]): # cycle until out of bounds
+            seat = table[r][c]
+            if seat != '.':  # since there's no more floor, just break
+                occupied += seat == '#'
+                break
             
             r,c = r+a,c+b
 
