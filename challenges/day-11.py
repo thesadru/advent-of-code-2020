@@ -9,7 +9,7 @@ directions = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
 
 def get_adjacent(row, col, table):
     """
-    Gets how many adjacent seats are occupied,
+    Gets how many adjacent seats are occupied.
     """
     occupied = 0
     for a,b in directions:
@@ -43,7 +43,7 @@ def get_visible(row, col, table):
 
 def conways_iteration(table, tolerancy=4, use_sight=False):
     """
-    Does an iteration of conways game of life directly to `table`.
+    Does an iteration of conways game of life directly to the table.
     Returns if there was a change.
     """
     old = deepcopy(table)
@@ -67,7 +67,7 @@ def conways_iteration(table, tolerancy=4, use_sight=False):
 
 def count_occupied(table):
     """
-    Counts how many seats are occupied in `data`
+    Counts how many seats are occupied in the table.
     """
     occupied = 0
     for row in range(len(table)):
