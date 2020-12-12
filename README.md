@@ -15,3 +15,4 @@ What method did we need to use to get us to the result?
 09. advanced arrays and slicing
 10. simple pathfinding
 11. conway's game of life
+12. 2D plane
