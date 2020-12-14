@@ -16,3 +16,5 @@ What method did we need to use to get us to the result?
 10. simple pathfinding
 11. conway's game of life
 12. 2D plane
+13. advanced math theory modulo
+14. bitwise
