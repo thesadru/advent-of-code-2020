@@ -18,3 +18,4 @@ What method did we need to use to get us to the result?
 12. 2D plane
 13. advanced math theory modulo
 14. bitwise
+15. optimized index lookup
