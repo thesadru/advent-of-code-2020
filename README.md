@@ -19,3 +19,5 @@ What method did we need to use to get us to the result?
 13. advanced math theory modulo
 14. bitwise
 15. optimized index lookup
+16. pairing randomized tuples
+17. conway's game of life, multidimensional bogaloo
